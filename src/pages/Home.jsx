@@ -13,9 +13,8 @@ export default function Home() {
         <p className="text-gray-text text-lg">
           security research • bug bounty • web pentesting
         </p>
-        <p className="mt-6 text-gray-text max-w-xl mx-auto leading-relaxed">
-          Hi, I'm shark3y! A security researcher and bug bounty hunter with 20+ CVEs. 
-          I find vulnerabilities so you can fix them before the threat actors exploit them.
+        <p className="mt-6 text-white max-w-xl mx-auto leading-relaxed">
+          Hi, I'm shark3y! A security researcher and bug bounty hunter with 20+ CVEs. Feel free to get in touch for web pentesting enquiries.
         </p>
       </section>
 
@@ -26,12 +25,6 @@ export default function Home() {
             <PostCard key={post.id} post={post} />
           ))}
         </div>
-        <Link
-          to="/posts"
-          className="inline-flex items-center gap-2 mt-6 text-neon-cyan hover:text-neon-purple transition-colors"
-        >
-          View all posts <ArrowRight size={16} />
-        </Link>
       </section>
     </div>
   );

@@ -25,7 +25,7 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm transition-colors ${
+                className={`text-sm font-medium transition-colors ${
                   location.pathname === link.path
                     ? 'text-white'
                     : 'text-gray-text hover:text-white'
@@ -52,7 +52,7 @@ export default function Navbar() {
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-sm transition-colors ${
+                className={`text-sm font-medium transition-colors ${
                   location.pathname === link.path
                     ? 'text-white'
                     : 'text-gray-text hover:text-white'
