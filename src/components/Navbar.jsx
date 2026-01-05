@@ -13,19 +13,19 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-dark-bg/80 backdrop-blur-md border-b border-transparent bg-clip-padding" style={{borderImage: 'linear-gradient(90deg, #06b6d4, #a855f7) 1'}}>
-      <div className="max-w-4xl mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+    <nav className="z-50 bg-dark-bg border-y border-dark-border mt-12 mb-8">
+      <div className="max-w-4xl mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-xl tracking-wide gradient-text transition-all font-semibold">
             shark3y.io
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 h-full">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-md text-gray transition-all nav-link-underline ${
+                className={`text-md font-semibold text-gray transition-all nav-link-underline h-full flex items-center px-1 ${
                   location.pathname === link.path ? 'nav-link-underline-active' : ''
                 }`}
               >
@@ -44,13 +44,13 @@ export default function Navbar() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-2 flex flex-col gap-4">
+          <div className="md:hidden pb-4 flex flex-col gap-4 border-t border-dark-border mt-0 pt-4">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-sm text-gray transition-all nav-link-underline inline-block w-fit ${
+                className={`text-sm font-bold text-gray-text transition-all nav-link-underline inline-block w-fit ${
                   location.pathname === link.path ? 'nav-link-underline-active' : ''
                 }`}
               >
