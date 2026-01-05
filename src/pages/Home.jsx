@@ -14,8 +14,8 @@ export default function Home() {
           security research • bug bounty • web pentesting
         </p>
         <p className="mt-6 text-gray-text max-w-xl mx-auto leading-relaxed">
-          Security researcher and bug bounty hunter with 20+ CVEs. 
-          I find vulnerabilities so you can fix them before the bad guys exploit them.
+          Hi, I'm shark3y! A security researcher and bug bounty hunter with 20+ CVEs. 
+          I find vulnerabilities so you can fix them before the threat actors exploit them.
         </p>
       </section>
 
