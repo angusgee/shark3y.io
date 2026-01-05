@@ -52,7 +52,7 @@ export default function Post() {
           <p className="text-gray-text leading-relaxed">{post.excerpt}</p>
           <div className="mt-8 p-6 rounded-lg bg-dark-surface border border-dark-border">
             <p className="text-gray-muted text-sm">
-              Full writeup coming soon. This is a placeholder for the detailed blog post content.
+              Full writeup coming soon.
             </p>
           </div>
         </div>

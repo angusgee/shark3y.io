@@ -16,7 +16,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-dark-bg/80 backdrop-blur-md border-b border-transparent bg-clip-padding" style={{borderImage: 'linear-gradient(90deg, #06b6d4, #a855f7) 1'}}>
       <div className="max-w-4xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-xl font-semibold tracking-wide text-white hover-gradient-text transition-all">
+          <Link to="/" className="text-xl tracking-wide gradient-text transition-all font-semibold">
             shark3y.io
           </Link>
 
@@ -25,7 +25,7 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-md font-bold text-white transition-all nav-link-underline ${
+                className={`text-md font-semibold text-gray transition-all nav-link-underline ${
                   location.pathname === link.path ? 'nav-link-underline-active' : ''
                 }`}
               >
