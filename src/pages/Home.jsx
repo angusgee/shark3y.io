@@ -9,10 +9,10 @@ export default function Home() {
           shark3y
         </h1>
         <p className="text-gray-text text-md">
-          security research • bug bounty • web pentesting
+          security researcher • bug bounty hunter
         </p>
         <p className="mt-8 text-white text-lg max-w-xl mx-auto leading-relaxed">
-          Hi, I'm shark3y, a security researcher and bug bounty hunter with 20+ CVEs. Get in touch for web pentesting enquiries!
+          Hi, I'm shark3y, a security researcher and bug bounty hunter with 20+ CVEs. Get in touch for web pentesting or collabs!
         </p>
       </section>
 
