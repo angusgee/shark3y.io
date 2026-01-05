@@ -25,10 +25,10 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-md transition-all ${
                   location.pathname === link.path
-                    ? 'text-white'
-                    : 'text-gray-text hover:text-white'
+                    ? 'text-white font-bold'
+                    : 'text-gray-text font-medium hover:text-white hover:font-bold focus:text-white focus:font-bold focus-visible:font-bold active:font-bold'
                 }`}
               >
                 {link.name}
@@ -52,10 +52,10 @@ export default function Navbar() {
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm transition-all ${
                   location.pathname === link.path
-                    ? 'text-white'
-                    : 'text-gray-text hover:text-white'
+                    ? 'text-white font-bold'
+                    : 'text-gray-text font-medium hover:text-white hover:font-bold focus:text-white focus:font-bold focus-visible:font-bold active:font-bold'
                 }`}
               >
                 {link.name}
