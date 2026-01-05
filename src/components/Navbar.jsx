@@ -25,10 +25,8 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-md transition-all ${
-                  location.pathname === link.path
-                    ? 'text-white font-bold'
-                    : 'text-gray-text font-medium hover:text-white hover:font-bold focus:text-white focus:font-bold focus-visible:font-bold active:font-bold'
+                className={`text-md font-bold text-white transition-all nav-link-underline ${
+                  location.pathname === link.path ? 'nav-link-underline-active' : ''
                 }`}
               >
                 {link.name}
@@ -52,10 +50,8 @@ export default function Navbar() {
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-sm transition-all ${
-                  location.pathname === link.path
-                    ? 'text-white font-bold'
-                    : 'text-gray-text font-medium hover:text-white hover:font-bold focus:text-white focus:font-bold focus-visible:font-bold active:font-bold'
+                className={`text-sm font-bold text-white transition-all nav-link-underline inline-block w-fit ${
+                  location.pathname === link.path ? 'nav-link-underline-active' : ''
                 }`}
               >
                 {link.name}
