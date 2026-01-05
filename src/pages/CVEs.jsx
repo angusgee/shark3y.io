@@ -18,7 +18,7 @@ export default function CVEs() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-2">
-        <span className="gradient-text">CVEs</span>
+        <span className="text-gray">CVEs</span>
       </h1>
       <p className="text-gray-text mb-8">
         A collection of vulnerabilities I've discovered and responsibly disclosed.

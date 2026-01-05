@@ -25,7 +25,7 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-md font-semibold text-gray transition-all nav-link-underline ${
+                className={`text-md text-gray transition-all nav-link-underline ${
                   location.pathname === link.path ? 'nav-link-underline-active' : ''
                 }`}
               >
@@ -50,7 +50,7 @@ export default function Navbar() {
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-sm font-bold text-white transition-all nav-link-underline inline-block w-fit ${
+                className={`text-sm text-gray transition-all nav-link-underline inline-block w-fit ${
                   location.pathname === link.path ? 'nav-link-underline-active' : ''
                 }`}
               >

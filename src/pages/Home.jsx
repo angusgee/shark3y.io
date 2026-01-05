@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <section className="text-center mb-16">
-        <h1 className="text-5xl md:text-6xl mb-4 font-saira text-white">
+        <h1 className="text-5xl md:text-6xl mb-4 font-saira text-gray">
           shark3y
         </h1>
         <p className="text-gray-text text-md">
