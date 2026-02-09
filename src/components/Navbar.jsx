@@ -13,20 +13,22 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="z-50 bg-dark-bg border-y border-dark-border mt-12 mb-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-xl tracking-wide gradient-text transition-all font-semibold">
+    <nav className="z-50 border-b border-dark-border">
+      <div className="max-w-3xl mx-auto px-6">
+        <div className="flex items-center justify-between h-14">
+          <Link to="/" className="font-mono-display text-sm font-semibold tracking-wider accent-text hover:opacity-80 transition-opacity">
             shark3y.io
           </Link>
 
-          <div className="hidden md:flex items-center gap-8 h-full">
+          <div className="hidden md:flex items-center gap-6 h-full">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-md font-semibold text-gray transition-all nav-link-underline h-full flex items-center px-1 ${
-                  location.pathname === link.path ? 'nav-link-underline-active' : ''
+                className={`font-mono-display text-xs tracking-wide lowercase nav-link-underline h-full flex items-center px-1 transition-colors ${
+                  location.pathname === link.path
+                    ? 'text-heading nav-link-underline-active'
+                    : 'text-body-muted hover:text-body'
                 }`}
               >
                 {link.name}
@@ -35,23 +37,23 @@ export default function Navbar() {
           </div>
 
           <button
-            className="md:hidden text-gray-text hover:text-white transition-colors"
+            className="md:hidden text-body-muted hover:text-heading transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden pb-4 flex flex-col gap-4 border-t border-dark-border mt-0 pt-4">
+          <div className="md:hidden pb-4 flex flex-col gap-3 border-t border-dark-border pt-4">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-sm font-bold text-gray-text transition-all nav-link-underline inline-block w-fit ${
-                  location.pathname === link.path ? 'nav-link-underline-active' : ''
+                className={`font-mono-display text-xs tracking-wide lowercase transition-colors ${
+                  location.pathname === link.path ? 'text-accent' : 'text-body-muted hover:text-body'
                 }`}
               >
                 {link.name}

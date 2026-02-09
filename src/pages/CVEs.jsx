@@ -2,10 +2,10 @@ import { useMemo } from 'react';
 import { cves } from '../data/cves';
 
 function getCvssColor(cvss) {
-  if (cvss >= 9.0) return 'text-red-500';
-  if (cvss >= 7.0) return 'text-orange-500';
-  if (cvss >= 4.0) return 'text-yellow-500';
-  return 'text-green-500';
+  if (cvss >= 9.0) return 'text-danger';
+  if (cvss >= 7.0) return 'text-warning';
+  if (cvss >= 4.0) return 'text-yellow-300';
+  return 'text-accent';
 }
 
 function getCvssBadge(cvss) {
@@ -19,76 +19,60 @@ export default function CVEs() {
   const sortedCves = useMemo(() => [...cves].sort((a, b) => b.cvss - a.cvss), []);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-2">
-        <span className="text-gray">CVEs</span>
-      </h1>
-      <p className="text-gray-text mb-8">
-        A collection of vulnerabilities I've discovered and responsibly disclosed.
-      </p>
+    <div className="max-w-3xl mx-auto px-6 py-16">
+      <div className="mb-10 animate-in">
+        <h1 className="font-mono-display text-2xl font-bold text-heading mb-2 tracking-tight">CVEs</h1>
+        <p className="text-body text-base">
+          Vulnerabilities discovered and responsibly disclosed.
+        </p>
+      </div>
 
       {/* Mobile card layout */}
-      <div className="sm:hidden flex flex-col gap-4">
+      <div className="sm:hidden flex flex-col gap-3 animate-in animate-in-delay-1">
         {sortedCves.map((cve) => (
-          <div
-            key={cve.id}
-            className="border border-dark-border/50 rounded-lg p-4 hover:bg-dark-surface/50 transition-colors"
-          >
+          <div key={cve.id} className="card bg-dark-surface p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-neon-cyan font-mono text-sm">{cve.id}</span>
-              <span className={`font-mono text-sm font-medium ${getCvssColor(cve.cvss)}`}>
-                {cve.cvss.toFixed(1)} <span className="text-xs text-gray-muted">{getCvssBadge(cve.cvss)}</span>
+              <span className="font-mono-display text-xs text-accent">{cve.id}</span>
+              <span className={`font-mono-display text-xs font-medium ${getCvssColor(cve.cvss)}`}>
+                {cve.cvss.toFixed(1)}
               </span>
             </div>
-            <p className="text-sm text-gray-text mb-2">{cve.description}</p>
-            <span className="text-xs text-gray-muted">
-              {new Date(cve.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-              })}
+            <p className="text-base text-body mb-2">{cve.description}</p>
+            <span className="font-mono-display text-xs text-body-muted">
+              {new Date(cve.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
             </span>
           </div>
         ))}
       </div>
 
       {/* Desktop table layout */}
-      <div className="hidden sm:block overflow-x-auto">
+      <div className="hidden sm:block overflow-x-auto animate-in animate-in-delay-1">
         <table className="w-full text-left">
           <thead>
             <tr className="border-b border-dark-border">
-              <th className="py-3 px-4 text-sm font-medium text-gray-text">CVE ID</th>
-              <th className="py-3 px-4 text-sm font-medium text-gray-text">Description</th>
-              <th className="py-3 px-4 text-sm font-medium text-gray-text text-center">CVSS</th>
-              <th className="py-3 px-4 text-sm font-medium text-gray-text text-right">Date</th>
+              <th className="py-3 px-3 font-mono-display text-xs font-medium text-body-muted uppercase tracking-wider">CVE ID</th>
+              <th className="py-3 px-3 font-mono-display text-xs font-medium text-body-muted uppercase tracking-wider">Description</th>
+              <th className="py-3 px-3 font-mono-display text-xs font-medium text-body-muted uppercase tracking-wider text-center">CVSS</th>
+              <th className="py-3 px-3 font-mono-display text-xs font-medium text-body-muted uppercase tracking-wider text-right">Date</th>
             </tr>
           </thead>
           <tbody>
             {sortedCves.map((cve) => (
-              <tr
-                key={cve.id}
-                className="border-b border-dark-border/50 hover:bg-dark-surface/50 transition-colors"
-              >
-                <td className="py-4 px-4">
-                  <span className="text-neon-cyan font-mono text-sm">{cve.id}</span>
+              <tr key={cve.id} className="border-b border-dark-border/50 hover:bg-dark-surface/50 transition-colors">
+                <td className="py-3.5 px-3">
+                  <span className="font-mono-display text-xs text-accent">{cve.id}</span>
                 </td>
-                <td className="py-4 px-4 text-sm text-gray-text max-w-md">
-                  {cve.description}
-                </td>
-                <td className="py-4 px-4 text-center">
-                  <span className={`font-mono text-sm font-medium ${getCvssColor(cve.cvss)}`}>
+                <td className="py-3.5 px-3 text-base text-body max-w-md">{cve.description}</td>
+                <td className="py-3.5 px-3 text-center">
+                  <span className={`font-mono-display text-xs font-semibold ${getCvssColor(cve.cvss)}`}>
                     {cve.cvss.toFixed(1)}
                   </span>
-                  <span className="block text-xs text-gray-muted mt-0.5">
+                  <span className="block font-mono-display text-[10px] text-body-muted mt-0.5">
                     {getCvssBadge(cve.cvss)}
                   </span>
                 </td>
-                <td className="py-4 px-4 text-sm text-gray-muted text-right whitespace-nowrap">
-                  {new Date(cve.date).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric',
-                  })}
+                <td className="py-3.5 px-3 font-mono-display text-xs text-body-muted text-right whitespace-nowrap">
+                  {new Date(cve.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
                 </td>
               </tr>
             ))}
@@ -96,8 +80,8 @@ export default function CVEs() {
         </table>
       </div>
 
-      <p className="mt-8 text-sm text-gray-muted text-center">
-        Showing {sortedCves.length} CVEs • All vulnerabilities were responsibly disclosed and are now patched in the latest versions
+      <p className="mt-8 font-mono-display text-xs text-body-muted text-center">
+        {sortedCves.length} CVEs &middot; All responsibly disclosed and patched
       </p>
     </div>
   );
