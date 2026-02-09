@@ -195,6 +195,6 @@ export const cves = [
     id: 'CVE-2025-15525',
     description: 'Ajax Load More – Infinite Scroll, Lazy Load & Load More <= 7.8.1 - Incorrect Authorization to Unauthenticated Private/Draft Post Title and Excerpt Exposure',
     cvss: 5.3,
-    date: '2025-15526',
+    date: '2025-01-30',
   },
 ];
