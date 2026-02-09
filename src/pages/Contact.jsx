@@ -1,4 +1,4 @@
-import { Twitter, Linkedin, Mail } from 'lucide-react';
+import { Twitter, Mail } from 'lucide-react';
 
 const socialLinks = [
   {
@@ -9,9 +9,9 @@ const socialLinks = [
   },
   {
     name: 'Email',
-    href: 'mailto:contact@shark3y.io',
+    href: 'mailto:info@shark3y.io',
     icon: Mail,
-    handle: 'contact@shark3y.io',
+    handle: 'info@shark3y.io',
   },
 ];
 
