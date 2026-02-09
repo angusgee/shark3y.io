@@ -156,13 +156,13 @@ export const cves = [
     date: '2026-01-14',
   },
   {
-    id: 'CVE-202',
+    id: 'CVE-2025-14448',
     description: 'WP-Members Membership Plugin <= 3.5.4.3 - Authenticated (Subscriber+) Stored Cross-Site Scripting via Multiple Checkbox and Multiple Select User Profile Fields',
     cvss: 5.4,
     date: '2026-01-14',
   },
   {
-    id: 'CVE-202',
+    id: 'CVE-2025-14436',
     description: 'Brevo for WooCommerce <= 4.0.49 - Unauthenticated Stored Cross-Site Scripting',
     cvss: 7.2,
     date: '2026-01-08',

@@ -8,12 +8,6 @@ const socialLinks = [
     handle: '@shark3yx',
   },
   {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com/in/shark3y',
-    icon: Linkedin,
-    handle: 'shark3y',
-  },
-  {
     name: 'Email',
     href: 'mailto:contact@shark3y.io',
     icon: Mail,
@@ -28,7 +22,7 @@ export default function Contact() {
         <span className="text-gray">Contact</span>
       </h1>
       <p className="text-gray-text mb-8">
-        Get in touch for security research collaborations, bug bounty inquiries, or just to say hello.
+        Get in touch for security research collaborations, bug bounty inquiries, or just to say hi.
       </p>
 
       <div className="flex flex-col gap-4 max-w-md">

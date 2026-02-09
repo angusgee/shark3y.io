@@ -12,7 +12,7 @@ export default function Home() {
           security researcher • bug bounty hunter
         </p>
         <p className="mt-8 text-white text-lg max-w-xl mx-auto leading-relaxed">
-          Hi, I'm shark3y, a security researcher and bug bounty hunter with 20+ CVEs. Get in touch for web pentesting or collabs!
+          Hi, I'm shark3y, a security researcher and bug bounty hunter with 35+ CVEs. Get in touch for web pentesting or collabs!
         </p>
       </section>
 

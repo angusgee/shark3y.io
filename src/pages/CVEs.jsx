@@ -68,7 +68,7 @@ export default function CVEs() {
       </div>
 
       <p className="mt-8 text-sm text-gray-muted text-center">
-        Showing {cves.length} CVEs • All vulnerabilities were responsibly disclosed
+        Showing {cves.length} CVEs • All vulnerabilities were responsibly disclosed and are now patched in the latest versions
       </p>
     </div>
   );
