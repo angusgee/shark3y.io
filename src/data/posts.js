@@ -1,42 +1,10 @@
 export const posts = [
   {
     id: 1,
-    slug: 'exploiting-idor-in-modern-apis',
-    title: 'Exploiting IDOR in Modern APIs',
-    date: '2024-04-24',
-    excerpt: 'An in-depth look at exploiting Insecure Direct Object References in REST APIs.',
-    tags: ['idor', 'api', 'bug bounty'],
-  },
-  {
-    id: 2,
-    slug: 'authentication-bypass-via-oauth-misconfig',
-    title: 'Authentication Bypass via OAuth Misconfig',
-    date: '2024-04-10',
-    excerpt: 'How I bypassed OAuth misconfigurations to gain unauthorized access.',
-    tags: ['oauth', 'auth', 'misconfig'],
-  },
-  {
-    id: 3,
-    slug: 'stored-xss-in-markdown-renderers',
-    title: 'Stored XSS in Markdown Renderers',
-    date: '2024-04-02',
-    excerpt: 'Finding and exploiting stored XSS vulnerabilities in markdown processors.',
-    tags: ['xss', 'markdown', 'web'],
-  },
-  {
-    id: 4,
-    slug: 'bypassing-2fa-through-flawed-password-reset',
-    title: 'Bypassing 2FA Through Flawed Password Reset',
-    date: '2024-03-20',
-    excerpt: 'Abusing password reset flaws to bypass two-factor authentication.',
-    tags: ['2fa', 'auth', 'bugs'],
-  },
-  {
-    id: 5,
-    slug: 'oauth-token-leakage-via-referrer-headers',
-    title: 'OAuth Token Leakage via Referrer Headers',
-    date: '2024-03-08',
-    excerpt: 'Discovering how OAuth tokens can be leaked through Referrer headers.',
-    tags: ['oauth', 'referrer', 'token'],
-  },
+    slug: 'bug-bounty-2026',
+    title: 'Bug Bounty - Goals 2026',
+    date: '2026-01-15',
+    excerpt: 'Setting out some goals for security research and bug bounty for 2026.',
+    tags: ['bug bounty', 'motivation'],
+  }
 ];
