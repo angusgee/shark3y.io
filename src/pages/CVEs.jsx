@@ -24,7 +24,33 @@ export default function CVEs() {
         A collection of vulnerabilities I've discovered and responsibly disclosed.
       </p>
 
-      <div className="overflow-x-auto">
+      {/* Mobile card layout */}
+      <div className="sm:hidden flex flex-col gap-4">
+        {cves.map((cve) => (
+          <div
+            key={cve.id}
+            className="border border-dark-border/50 rounded-lg p-4 hover:bg-dark-surface/50 transition-colors"
+          >
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-neon-cyan font-mono text-sm">{cve.id}</span>
+              <span className={`font-mono text-sm font-medium ${getCvssColor(cve.cvss)}`}>
+                {cve.cvss.toFixed(1)} <span className="text-xs text-gray-muted">{getCvssBadge(cve.cvss)}</span>
+              </span>
+            </div>
+            <p className="text-sm text-gray-text mb-2">{cve.description}</p>
+            <span className="text-xs text-gray-muted">
+              {new Date(cve.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop table layout */}
+      <div className="hidden sm:block overflow-x-auto">
         <table className="w-full text-left">
           <thead>
             <tr className="border-b border-dark-border">
