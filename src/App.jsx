@@ -13,7 +13,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="cves" element={<CVEs />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="post/:slug" element={<Post />} />
+          <Route path=":slug" element={<Post />} />
         </Route>
       </Routes>
     </BrowserRouter>

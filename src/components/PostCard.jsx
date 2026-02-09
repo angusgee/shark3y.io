@@ -8,7 +8,7 @@ export default function PostCard({ post }) {
   });
 
   return (
-    <Link to={`/post/${post.slug}`} className="block">
+    <Link to={`/${post.slug}`} className="block">
       <article className="gradient-border rounded-lg bg-dark-surface p-5 transition-all hover:bg-dark-surface/80">
         <h3 className="text-lg font-medium text-white mb-1">{post.title}</h3>
         <time className="text-sm text-gray-muted">{formattedDate}</time>

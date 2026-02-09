@@ -1,10 +1,34 @@
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { posts } from '../data/posts';
+
+const markdownFiles = import.meta.glob('../content/*.md', { query: '?raw', import: 'default' });
 
 export default function Post() {
   const { slug } = useParams();
   const post = posts.find((p) => p.slug === slug);
+  const [content, setContent] = useState('');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (!post) return;
+
+    const path = `../content/${post.slug}.md`;
+    const loader = markdownFiles[path];
+
+    if (loader) {
+      loader().then((raw) => {
+        setContent(raw);
+        setLoading(false);
+      });
+    } else {
+      setContent('');
+      setLoading(false);
+    }
+  }, [post]);
 
   if (!post) {
     return (
@@ -48,14 +72,31 @@ export default function Post() {
           </div>
         </header>
 
-        <div className="prose prose-invert max-w-none">
-          <p className="text-gray-text leading-relaxed">{post.excerpt}</p>
+        {loading ? (
+          <p className="text-gray-muted">Loading...</p>
+        ) : content ? (
+          <div className="prose prose-invert max-w-none
+            prose-headings:text-white
+            prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+            prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+            prose-p:text-gray-text prose-p:leading-relaxed
+            prose-li:text-gray-text
+            prose-strong:text-white
+            prose-a:text-neon-cyan hover:prose-a:text-neon-purple
+            prose-code:text-neon-cyan prose-code:bg-dark-surface prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+            prose-pre:bg-dark-surface prose-pre:border prose-pre:border-dark-border
+            prose-blockquote:border-neon-cyan prose-blockquote:text-gray-text
+            prose-hr:border-dark-border"
+          >
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+          </div>
+        ) : (
           <div className="mt-8 p-6 rounded-lg bg-dark-surface border border-dark-border">
             <p className="text-gray-muted text-sm">
               Full writeup coming soon.
             </p>
           </div>
-        </div>
+        )}
       </article>
     </div>
   );
