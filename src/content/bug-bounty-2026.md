@@ -1,41 +1,46 @@
-# Bug Bounty - Goals 2026
-
-It's a new year and time to set some goals for security research and bug bounty in 2026.
+It's a new year and therefore time for the obligatory motivational post.
 
 ## Looking Back at 2025
 
-2025 was a solid year — I picked up 35+ CVEs across various WordPress plugins and started building a reputation in the bug bounty space. The focus was primarily on:
+For me, 2025 was a solid year — I broke into WordPress plugin research and racked up more than two dozen CVEs, everything from RCE to Arbitrary File Uploads and complete nuking of entire websites via path traversals and missing capability checks.
 
-- **Authorization vulnerabilities** — Missing capability checks, IDOR, privilege escalation
-- **Insecure Direct Object References** — Particularly in REST API endpoints
-- **Authentication bypasses** — OAuth misconfigurations and flawed password reset flows
+After investing a lot of time vibe coding myself some WordPress automations and making top three on WordFence in Oct and Nov '25, I'm pretty happy with WordPress as my "primary" program, and ready to find some SPAs to hack on too. 
+
+I've been building and breaking websites for a good few years now however getting a taste of some bounties has really got me hooked. Let's. Fucking. Go. 
+
 
 ## Goals for 2026
 
-### 1. Expand Beyond WordPress
+### 1. Report 100 Valid Bugs
 
-While WordPress plugins remain a rich target surface, I want to branch out into:
+This is my primary goal for the year. I'm still only hunting part time however my WordPress automation is throwing me leads every week and there's a world of vibe coded SPAs out there needing pwned, so this seems doable.  
+- WordFence
+- HackerOne
+- YesWeHack
 
-- SaaS applications
-- Mobile app APIs
-- Cloud misconfigurations (AWS, GCP)
+### 2. Publish ~25 Technical Writeups
 
-### 2. Hit 50+ CVEs
+One of the things I love best about hacking is the community. 
+- CVE writeups
+- methodology posts / mini research pieces
+- “why this was hard” / lessons learned
 
-Ambitious but achievable. The key is consistency — dedicating focused research time every week rather than sporadic bursts.
+### 3. Increase WP Monitoring to All Plugins > 50k Installs
 
-### 3. Improve Writeup Quality
+Plugins with > 50k active installs are fully in scope for WordFence's Bug Bounty program. There are somewhere in the region of 1.7k public, OOS plugins which meet this criteria so I shall expand my monitoring automation to flag risky code changes to all of them. I'm currently about halfway there but this goal is pivotal and feeds into the main one. 
 
-Every CVE deserves a proper writeup. Not just for the portfolio, but because clear documentation helps vendors patch faster and helps the community learn.
+### 4. Audit 12 SPAs on HackeOne
 
-### 4. Contribute to the Community
+Currently stuck in "tutorial hell" with web hacking and need a strong goal to focus my efforts and motivate me to 
 
-- Publish more technical blog posts here on shark3y.io
-- Share methodology and tooling where possible
-- Mentor newer researchers
+### 5. PWPA Certification
 
-## The Plan
+TCM Security content is generally on point. I completed this course a while back and just need to sit the exam. This will be my first pentesting cert and a good litmus test for the hacking systems I've been building. 
 
-The approach is simple: **pick a target, understand it deeply, then break it systematically**. No spray-and-pray. Deep understanding of the codebase and architecture always wins.
+### 6. Security+ Certification
 
-Let's get it.
+Completing CompTia A+ basic IT training has been a major help, not only in learning hacking but even in my day job and general computing life. The next step in my educational trajectory.
+
+## Next Steps
+
+Looking forward to writeups, research and lots of fun bugs this year! 
