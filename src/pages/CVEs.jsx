@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { cves } from '../data/cves';
 
 function getCvssColor(cvss) {
@@ -15,6 +16,8 @@ function getCvssBadge(cvss) {
 }
 
 export default function CVEs() {
+  const sortedCves = useMemo(() => [...cves].sort((a, b) => b.cvss - a.cvss), []);
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-2">
@@ -26,7 +29,7 @@ export default function CVEs() {
 
       {/* Mobile card layout */}
       <div className="sm:hidden flex flex-col gap-4">
-        {cves.map((cve) => (
+        {sortedCves.map((cve) => (
           <div
             key={cve.id}
             className="border border-dark-border/50 rounded-lg p-4 hover:bg-dark-surface/50 transition-colors"
@@ -61,7 +64,7 @@ export default function CVEs() {
             </tr>
           </thead>
           <tbody>
-            {cves.map((cve) => (
+            {sortedCves.map((cve) => (
               <tr
                 key={cve.id}
                 className="border-b border-dark-border/50 hover:bg-dark-surface/50 transition-colors"
@@ -94,7 +97,7 @@ export default function CVEs() {
       </div>
 
       <p className="mt-8 text-sm text-gray-muted text-center">
-        Showing {cves.length} CVEs • All vulnerabilities were responsibly disclosed and are now patched in the latest versions
+        Showing {sortedCves.length} CVEs • All vulnerabilities were responsibly disclosed and are now patched in the latest versions
       </p>
     </div>
   );
