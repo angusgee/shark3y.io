@@ -27,7 +27,7 @@ export default function Contact() {
       <div className="mb-10 animate-in">
         <h1 className="font-mono-display text-2xl font-bold text-heading mb-2 tracking-tight">Contact</h1>
         <p className="text-body text-base">
-          Security research collaborations, bug bounty inquiries, or just say hi.
+          Get in touch for security research collaborations, web app pentesting, or secure code review!
         </p>
       </div>
 
