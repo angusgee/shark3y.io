@@ -112,6 +112,7 @@ export const cves = [
     description: 'Print Invoice & Delivery Notes for WooCommerce <= 5.8.0 - Unauthenticated Remote Code Execution',
     cvss: 9.8,
     date: '2025-12-23',
+    url: 'https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/woocommerce-delivery-notes/print-invoice-delivery-notes-for-woocommerce-580-unauthenticated-remote-code-execution',
   },
   {
     id: 'CVE-2025-14061',

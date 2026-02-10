@@ -45,8 +45,12 @@ export default function Navbar() {
           </button>
         </div>
 
-        {mobileMenuOpen && (
-          <div className="md:hidden pb-4 flex flex-col gap-3 border-t border-dark-border pt-4">
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-400 ease-out ${
+            mobileMenuOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="pb-4 flex flex-col gap-3 border-t border-dark-border pt-4">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -60,7 +64,7 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
