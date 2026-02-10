@@ -46,7 +46,7 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`md:hidden overflow-hidden transition-all duration-400 ease-out ${
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
             mobileMenuOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
