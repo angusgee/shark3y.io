@@ -32,7 +32,7 @@ export default function CVEs() {
         {sortedCves.map((cve) => (
           <div key={cve.id} className="card bg-dark-surface p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="font-mono-display text-xs text-accent">{cve.id}</span>
+              <a href={cve.url} target="_blank" rel="noopener noreferrer" className="font-mono-display text-xs text-accent hover:underline">{cve.id}</a>
               <span className={`font-mono-display text-xs font-medium ${getCvssColor(cve.cvss)}`}>
                 {cve.cvss.toFixed(1)}
               </span>
@@ -60,7 +60,7 @@ export default function CVEs() {
             {sortedCves.map((cve) => (
               <tr key={cve.id} className="border-b border-dark-border/50 hover:bg-dark-surface/50 transition-colors">
                 <td className="py-3.5 px-3">
-                  <span className="font-mono-display text-xs text-accent">{cve.id}</span>
+                  <a href={cve.url} target="_blank" rel="noopener noreferrer" className="font-mono-display text-xs text-accent hover:underline">{cve.id}</a>
                 </td>
                 <td className="py-3.5 px-3 text-base text-body max-w-md">{cve.description}</td>
                 <td className="py-3.5 px-3 text-center">
