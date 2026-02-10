@@ -12,11 +12,11 @@ export default function Home() {
         <h1 className="font-mono-display text-3xl md:text-4xl font-bold text-heading mb-3 tracking-tight">
           shark3y
         </h1>
-        <p className="font-mono-display text-base text-body-muted mb-6 tracking-wide">
+        <p className="font-mono-display text-sm text-body-muted mb-6 tracking-wide">
           security researcher &middot; bug bounty hunter
         </p>
         <p className="text-body max-w-lg leading-relaxed">
-          Security researcher and bug bounty hunter with 35+ CVEs. Get in touch for web pentesting or collabs.
+          Security researcher and bug bounty hunter with 30+ CVEs. Get in touch for web pentesting, secure code review, or collabs.
         </p>
       </section>
 

@@ -14,13 +14,10 @@ I've been building and breaking websites for a good few years now however gettin
 ### 1. Report 100 Valid Bugs
 
 This is my primary goal for the year. I'm still only hunting part time however my WordPress automation is throwing me leads every week and there's a world of vibe coded SPAs out there needing pwned, so this seems doable.  
-- WordFence
-- HackerOne
-- YesWeHack
 
 ### 2. Publish ~25 Technical Writeups
 
-One of the things I love best about hacking is the community. 
+One of the things I love best about hacking is the community. I'm going to contribute back to the community with:
 - CVE writeups
 - methodology posts / mini research pieces
 - “why this was hard” / lessons learned
@@ -31,7 +28,7 @@ Plugins with > 50k active installs are fully in scope for WordFence's Bug Bounty
 
 ### 4. Audit 12 SPAs on HackeOne
 
-Currently stuck in "tutorial hell" with web hacking and need a strong goal to focus my efforts and motivate me to 
+Setting a strong goal to focus my efforts and motivate me to find 2-3 good programs to hack on. Been building a web hacking workflow for a while now but not found any decent bugs yet and feel like all it will take from here is practice and consistency. 
 
 ### 5. PWPA Certification
 
@@ -39,8 +36,8 @@ TCM Security content is generally on point. I completed this course a while back
 
 ### 6. Security+ Certification
 
-Completing CompTia A+ basic IT training has been a major help, not only in learning hacking but even in my day job and general computing life. The next step in my educational trajectory.
+Completing CompTia A+ basic IT training has been a major help, not only in learning hacking but even in my day job and general computing life. The next step in my educational trajectory is Security+ which I can get funding for. 
 
 ## Next Steps
 
-Looking forward to writeups, research and lots of fun bugs this year! 
+Looking forward to doing research and finding lots of fun bugs this year! 
